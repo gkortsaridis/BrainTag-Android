@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/play_game" android:id="@+id/navItem1" android:title="Play Game" />
+        <item android:icon="@drawable/trophy" android:id="@+id/navItem2" android:title="Scoreboard" />
+        <item android:icon="@drawable/info" android:id="@+id/navItem3" android:title="Info" />
+        <item android:icon="@drawable/tag" android:id="@+id/navItem4" android:title="P.O.S. Tag Description" />
+        <item android:icon="@drawable/logout" android:id="@+id/navItem5" android:title="Log Out" />
+    </group>
+</menu>
