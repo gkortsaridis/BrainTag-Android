@@ -5,8 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -33,11 +38,27 @@ public class GameResultActivity extends AppCompatActivity {
     ArrayList<String> wrongs_list;
     JSONObject wrongs_json;
     SharedPreferences sharedPreferences;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_result);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null){
+            toolbar.setTitleTextColor(Color.WHITE);
+
+            final Drawable upArrow = ContextCompat.getDrawable(getBaseContext(), R.drawable.abc_ic_ab_back_material);
+            upArrow.setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.white), PorterDuff.Mode.SRC_ATOP);
+
+            getSupportActionBar().setHomeAsUpIndicator(upArrow);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 
         sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
 
@@ -69,7 +90,7 @@ public class GameResultActivity extends AppCompatActivity {
             setRequestedOrientation(getRequestedOrientation());
 
             StringEntity entity = new StringEntity(entityBody);
-            client.post(getBaseContext(), "http://83.212.118.131:3000/game_end/", entity, "application/json", new AsyncHttpResponseHandler() {
+            client.post(getBaseContext(), getResources().getString(R.string.server_url)+"game_end/", entity, "application/json", new AsyncHttpResponseHandler() {
                 ProgressDialog pd;
 
                 @Override
@@ -94,7 +115,7 @@ public class GameResultActivity extends AppCompatActivity {
                         // called when response HTTP status is "4XX" (eg. 401, 403, 404)
 
                     pd.cancel();
-                    Log.i("RESPONSE","FAIL "+statusCode);
+                    Log.i(Helper.getTag(),"FAIL "+statusCode);
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                 }
             });
@@ -113,7 +134,6 @@ public class GameResultActivity extends AppCompatActivity {
         String[] strValues = wrongs.split(",");
 
         wrongs_list = new ArrayList<String>(Arrays.asList(strValues));
-        Log.i("Wrong List",wrongs_list.toString());
         wrongs_json = new JSONObject();
 
         try {
@@ -125,18 +145,13 @@ public class GameResultActivity extends AppCompatActivity {
 
             for(int i=0; i<wrongs_list.size(); i++){
                 String cur_error = wrongs_list.get(i).trim();
-                Log.i(i+" Adding cur error","|"+cur_error+"|");
                 if(wrongs_json.has(cur_error)) {
                     int new_val = wrongs_json.getInt(cur_error) + 1;
-                    Log.i("New val for " + cur_error, new_val + "");
 
                     wrongs_json.remove(cur_error);
                     wrongs_json.put(cur_error, new_val);
                 }
-                Log.i("new json size",wrongs_json.length()+"");
             }
-
-            Log.i("WRONGS FINAL",wrongs_json.toString());
 
         } catch (JSONException e) {
             e.printStackTrace();

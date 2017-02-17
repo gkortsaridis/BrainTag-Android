@@ -138,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.i("onRestore","InstanceState");
         setFragment(savedInstanceState.getString("what", "Calendar"));
     }
 

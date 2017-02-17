@@ -99,7 +99,7 @@ public class MainMenuFragment extends Fragment {
             getActivity().setRequestedOrientation(getActivity().getRequestedOrientation());
 
             StringEntity entity = new StringEntity(entityBody);
-            client.post(getContext(), "http://83.212.118.131:3000/scoreboard/", entity, "application/json", new AsyncHttpResponseHandler() {
+            client.post(getContext(), getResources().getString(R.string.server_url)+"scoreboard/", entity, "application/json", new AsyncHttpResponseHandler() {
                 ProgressDialog pd;
 
                 @Override
@@ -133,7 +133,7 @@ public class MainMenuFragment extends Fragment {
                     // called when response HTTP status is "4XX" (eg. 401, 403, 404)
 
                     pd.cancel();
-                    Log.i("RESPONSE","FAIL "+statusCode);
+                    Log.i(Helper.getTag(),"FAIL "+statusCode);
                     getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                 }
             });

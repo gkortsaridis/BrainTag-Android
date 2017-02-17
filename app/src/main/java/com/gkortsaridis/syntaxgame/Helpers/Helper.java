@@ -21,6 +21,17 @@ public class Helper {
     private static ArrayList<String> shortTags;
     private static ArrayList<String> longTags;
 
+    public static String getTag() {
+        String tag = "";
+        final StackTraceElement[] ste = Thread.currentThread().getStackTrace();
+        for (int i = 0; i < ste.length; i++) {
+            if (ste[i].getMethodName().equals("getTag")) {
+                tag = "("+ste[i + 1].getFileName() + ":" + ste[i + 1].getLineNumber()+")";
+            }
+        }
+        return tag;
+    }
+
     private static void getTags(){
 
         shortTags = new ArrayList<>();
@@ -176,38 +187,6 @@ public class Helper {
                 return i + sufixes[i % 10];
 
         }
-    }
-
-    public static ArrayList<String> getPossibleAnswers(String shortAnswer){
-        ArrayList<String> possibleAnswers = new ArrayList<>();
-        getTags();
-
-        int pos = -1;
-        for(int i=0; i<shortTags.size(); i++){
-            if(shortAnswer.equals(shortTags.get(i))){
-                pos = i;
-            }
-        }
-
-
-        if(pos != -1){
-            String correctAnswer = longTags.get(pos);
-
-            possibleAnswers.add(correctAnswer);
-            possibleAnswers.add("Ans B");
-            possibleAnswers.add("Ans C");
-            possibleAnswers.add("Ans D");
-        }else{
-            possibleAnswers.add("Sorry");
-            possibleAnswers.add("An");
-            possibleAnswers.add("Error");
-            possibleAnswers.add("Occured");
-        }
-
-
-        //Log.i("Possible anwers",possibleAnswers.toString());
-
-        return possibleAnswers;
     }
 
     public static boolean determineWords(String word){

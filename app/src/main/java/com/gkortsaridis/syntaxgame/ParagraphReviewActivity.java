@@ -86,7 +86,7 @@ public class ParagraphReviewActivity extends AppCompatActivity {
         client.addHeader("Content-Type", "application/json");
         setRequestedOrientation(getRequestedOrientation());
 
-        client.get(getBaseContext(), "http://83.212.118.131:3000/wrongs/", new AsyncHttpResponseHandler() {
+        client.get(getBaseContext(), getResources().getString(R.string.server_url)+"wrongs/", new AsyncHttpResponseHandler() {
             ProgressDialog pd;
 
             @Override
@@ -142,7 +142,7 @@ public class ParagraphReviewActivity extends AppCompatActivity {
                         public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                             // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                             pd.cancel();
-                            Log.i("RESPONSE","FAIL "+statusCode);
+                            Log.i(Helper.getTag(),"FAIL "+statusCode);
                             paragraphTV.setText("We are sorry\nWe could not retrieve a paragraph for you.\nPlease try again\n:(");
                             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                         }
@@ -161,7 +161,7 @@ public class ParagraphReviewActivity extends AppCompatActivity {
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                 pd.cancel();
-                Log.i("RESPONSE","FAIL "+statusCode);
+                Log.i(Helper.getTag(),"FAIL "+statusCode);
                 paragraphTV.setText("We are sorry\nWe could not retrieve a paragraph for you.\nPlease try again\n:(");
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
             }

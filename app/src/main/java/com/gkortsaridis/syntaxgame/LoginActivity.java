@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import com.gkortsaridis.syntaxgame.Helpers.Helper;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -52,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             setRequestedOrientation(getRequestedOrientation());
 
             StringEntity entity = new StringEntity(entityBody);
-            client.post(getBaseContext(), "http://83.212.118.131:3000/login/", entity, "application/json", new AsyncHttpResponseHandler() {
+            client.post(getBaseContext(), getResources().getString(R.string.server_url)+"login/", entity, "application/json", new AsyncHttpResponseHandler() {
                 ProgressDialog pd;
 
                 @Override
@@ -95,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                     alertDialog.show();
 
                     pd.cancel();
-                    Log.i("RESPONSE","FAIL "+statusCode);
+                    Log.i(Helper.getTag(),"FAIL "+statusCode);
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                 }
             });

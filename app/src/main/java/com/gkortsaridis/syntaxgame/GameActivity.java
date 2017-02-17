@@ -139,7 +139,7 @@ public class GameActivity extends AppCompatActivity {
             sentenceCount.setText("Sentence "+(cnt+1)+"/"+posdata.length());
 
             JSONObject sentenceObj = posdata.getJSONObject(cnt);
-            Log.i("Sentence",sentenceObj.getString("sentence"));
+            Log.i(Helper.getTag(),"Sentence : "+sentenceObj.getString("sentence"));
             JSONArray sentencePosTagging = sentenceObj.getJSONArray("posTagging");
             for(int i=0; i<sentencePosTagging.length(); i++){
                 JSONObject wordObj = sentencePosTagging.getJSONObject(i);
