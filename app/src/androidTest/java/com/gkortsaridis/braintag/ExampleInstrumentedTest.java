@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

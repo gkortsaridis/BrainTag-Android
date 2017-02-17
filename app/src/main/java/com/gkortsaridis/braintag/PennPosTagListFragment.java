@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.gkortsaridis.syntaxgame.Helpers.Helper;
-import com.gkortsaridis.syntaxgame.Helpers.PennPosTagAdapter;
-
-import java.util.ArrayList;
+import com.gkortsaridis.braintag.Helpers.Helper;
+import com.gkortsaridis.braintag.Helpers.PennPosTagAdapter;
 
 public class PennPosTagListFragment extends Fragment {
 

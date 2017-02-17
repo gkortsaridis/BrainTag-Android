@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,8 +14,8 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.gkortsaridis.syntaxgame.Helpers.CategoriesExpandableListViewAdapter;
-import com.gkortsaridis.syntaxgame.Helpers.Helper;
+import com.gkortsaridis.braintag.Helpers.CategoriesExpandableListViewAdapter;
+import com.gkortsaridis.braintag.Helpers.Helper;
 
 import java.util.ArrayList;
 import java.util.HashMap;

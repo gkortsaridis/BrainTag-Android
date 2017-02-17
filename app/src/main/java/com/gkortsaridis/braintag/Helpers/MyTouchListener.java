@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame.Helpers;
+package com.gkortsaridis.braintag.Helpers;
 
 import android.content.ClipData;
 import android.view.MotionEvent;

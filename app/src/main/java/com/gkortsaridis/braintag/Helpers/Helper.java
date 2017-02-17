@@ -1,6 +1,4 @@
-package com.gkortsaridis.syntaxgame.Helpers;
-
-import android.util.Log;
+package com.gkortsaridis.braintag.Helpers;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,7 +7,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 /**

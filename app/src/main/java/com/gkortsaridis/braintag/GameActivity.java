@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,10 +12,10 @@ import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.gkortsaridis.syntaxgame.Helpers.Helper;
-import com.gkortsaridis.syntaxgame.Helpers.MyDragListener;
-import com.gkortsaridis.syntaxgame.Helpers.MyTouchListener;
-import com.gkortsaridis.syntaxgame.Helpers.PredicateLayout;
+import com.gkortsaridis.braintag.Helpers.Helper;
+import com.gkortsaridis.braintag.Helpers.MyDragListener;
+import com.gkortsaridis.braintag.Helpers.MyTouchListener;
+import com.gkortsaridis.braintag.Helpers.PredicateLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;

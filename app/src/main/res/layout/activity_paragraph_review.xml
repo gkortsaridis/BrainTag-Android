@@ -6,7 +6,7 @@
     android:id="@+id/activity_paragraph_review"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gkortsaridis.syntaxgame.ParagraphReviewActivity">
+    tools:context="com.gkortsaridis.braintag.ParagraphReviewActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"

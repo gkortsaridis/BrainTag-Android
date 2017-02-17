@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame.Helpers;
+package com.gkortsaridis.braintag.Helpers;
 
 /**
  * Created by yoko on 14/02/2017.
@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.gkortsaridis.syntaxgame.R;
+import com.gkortsaridis.braintag.R;
 
 
 public class CategoriesExpandableListViewAdapter extends BaseExpandableListAdapter{

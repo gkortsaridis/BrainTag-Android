@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import com.gkortsaridis.syntaxgame.Helpers.Helper;
+import com.gkortsaridis.braintag.Helpers.Helper;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 

@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame.Helpers;
+package com.gkortsaridis.braintag.Helpers;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.gkortsaridis.syntaxgame.R;
+import com.gkortsaridis.braintag.R;
 
 /**
  * Created by yoko on 11/02/2017.

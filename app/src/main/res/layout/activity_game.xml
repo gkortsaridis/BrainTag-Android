@@ -6,7 +6,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gkortsaridis.syntaxgame.GameActivity">
+    tools:context="com.gkortsaridis.braintag.GameActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -50,13 +50,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.gkortsaridis.syntaxgame.Helpers.PredicateLayout
+            <com.gkortsaridis.braintag.Helpers.PredicateLayout
                 android:id="@+id/predicate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"/>
 
-            <com.gkortsaridis.syntaxgame.Helpers.PredicateLayout
+            <com.gkortsaridis.braintag.Helpers.PredicateLayout
                 android:id="@+id/predicate_layout_answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

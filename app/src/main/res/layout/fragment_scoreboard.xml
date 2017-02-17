@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gkortsaridis.syntaxgame.ScoreboardFragment">
+    tools:context="com.gkortsaridis.braintag.ScoreboardFragment">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

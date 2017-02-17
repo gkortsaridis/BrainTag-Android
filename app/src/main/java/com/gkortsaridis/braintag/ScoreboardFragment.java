@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame;
+package com.gkortsaridis.braintag;
 
 
 import android.app.ProgressDialog;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.gkortsaridis.syntaxgame.Helpers.Helper;
-import com.gkortsaridis.syntaxgame.Helpers.ScoreboardAdapter;
+import com.gkortsaridis.braintag.Helpers.Helper;
+import com.gkortsaridis.braintag.Helpers.ScoreboardAdapter;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 

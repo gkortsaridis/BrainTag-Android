@@ -1,4 +1,4 @@
-package com.gkortsaridis.syntaxgame.Helpers;
+package com.gkortsaridis.braintag.Helpers;
 
 /**
  * Created by yoko on 06/02/2017.

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gkortsaridis.syntaxgame.InfoFragment">
+    tools:context="com.gkortsaridis.braintag.InfoFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/tagme_logo_transp_letters_no_shadow"
                 android:layout_gravity="center_horizontal"/>
 
 
