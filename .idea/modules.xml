@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SyntaxGame.iml" filepath="$PROJECT_DIR$/SyntaxGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BrainTag.iml" filepath="$PROJECT_DIR$/BrainTag.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/braintagwear/braintagwear.iml" filepath="$PROJECT_DIR$/braintagwear/braintagwear.iml" />
     </modules>
   </component>
 </project>
