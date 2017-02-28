@@ -1,5 +1,15 @@
 package com.gkortsaridis.braintag.Helpers;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.util.Log;
+
+import com.gkortsaridis.braintag.ParagraphReviewActivity;
+import com.gkortsaridis.braintag.R;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,6 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+
+import cz.msebera.android.httpclient.Header;
 
 /**
  * Created by yoko on 06/02/2017.
@@ -113,43 +125,6 @@ public class Helper {
         longTags.add("Wh-pronoun");
         longTags.add("Possessive wh-pronoun");
         longTags.add("Wh-adverb");
-    }
-
-    public static HashMap<String, List<String>> getData() {
-        HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
-
-        List<String> sports = new ArrayList<String>();
-        sports.add("Sports");
-        sports.add("Basketball");
-        sports.add("Football");
-        sports.add("Soccer");
-        sports.add("Tennis");
-        sports.add("Cricket");
-        sports.add("Table Tennis");
-        sports.add("Volleyball");
-
-
-        List<String> science = new ArrayList<String>();
-        science.add("Science");
-        science.add("Galileo_Galilei");
-        science.add("Isaac_Newton");
-        science.add("Charles_Darwin");
-        science.add("Marie_Curie");
-        science.add("Nobel_Prize");
-        science.add("Nobel_Prize_in_Chemistry");
-        science.add("Nobel_Prize_in_Physics");
-
-        List<String> history = new ArrayList<String>();
-        history.add("History");
-        history.add("Prehistory");
-        history.add("Mesopotamia");
-        history.add("Alexander_the_Great");
-        history.add("Wars_of_Alexander_the_Great");
-
-        expandableListDetail.put("Sports", sports);
-        expandableListDetail.put("Science", science);
-        expandableListDetail.put("History", history);
-        return expandableListDetail;
     }
 
     public static ArrayList<String> getShortTags(){
