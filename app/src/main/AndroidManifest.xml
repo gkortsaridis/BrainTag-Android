@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.gkortsaridis.braintag.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,19 +21,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gkortsaridis.braintag.GameActivity"
+            android:name=".GameActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="com.gkortsaridis.braintag.ParagraphReviewActivity"
+            android:name=".ParagraphReviewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="com.gkortsaridis.braintag.GameResultActivity"
+            android:name=".GameResultActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="com.gkortsaridis.braintag.LoginActivity"
+            android:name=".LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:name="com.gkortsaridis.braintag.CategoriesActivity" />
-        <activity android:name="com.gkortsaridis.braintag.RegisterActivity"></activity>
+        <activity android:name=".CategoriesActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".TypeActivity"></activity>
     </application>
 
 </manifest>

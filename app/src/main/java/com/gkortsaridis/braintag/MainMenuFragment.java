@@ -23,6 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
 
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.entity.StringEntity;
@@ -32,7 +33,7 @@ public class MainMenuFragment extends Fragment {
     SharedPreferences sharedpreferences;
     String user;
     TextView myScoreTV,myRankTV;
-    Button randomGame, chooseCategory;
+    Button randomGame, chooseCategory, newsGrammar, typePractice;
 
     public MainMenuFragment() {
         // Required empty public constructor
@@ -47,6 +48,26 @@ public class MainMenuFragment extends Fragment {
         myRankTV = (TextView) view.findViewById(R.id.myrank);
         randomGame = (Button) view.findViewById(R.id.playRandomGame);
         chooseCategory = (Button) view.findViewById(R.id.chooseCategory);
+        newsGrammar = (Button) view.findViewById(R.id.newsGrammar);
+        typePractice = (Button) view.findViewById(R.id.typePractice);
+
+        newsGrammar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ParagraphReviewActivity.class);
+                intent.putExtra("fromCategory",true);
+                intent.putExtra("category","_news_");
+                startActivity(intent);
+            }
+        });
+
+        typePractice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TypeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         randomGame.setOnClickListener(new View.OnClickListener() {
             @Override

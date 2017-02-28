@@ -117,7 +117,7 @@ public class GameActivity extends AppCompatActivity {
                     theWordView.setTextColor(Color.RED);
                     posView.setTextColor(Color.RED);
                     if(!pos.equals("--")){
-                        wrongs.add(pos);
+                        wrongs.add(answer);
                     }
                 }else{
                     correctCount++;

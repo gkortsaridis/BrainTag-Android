@@ -4,4 +4,6 @@
     <string name="drawer_close">close</string>
 
     <string name="server_url">http://83.212.118.131:3000/</string>
+    <string name="newsapi_url">https://newsapi.org/v1/articles</string>
+    <string name="newsapi_apiKey">50d716cb112e4a5db187990b0c011b96</string>
 </resources>

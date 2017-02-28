@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">BrainTag</string>
-    <string name="hello_round">Hello Round World!</string>
-    <string name="hello_square">Hello Square World!</string>
+    <string name="info_txt">Score : 234\nRank : 45th</string>
 </resources>

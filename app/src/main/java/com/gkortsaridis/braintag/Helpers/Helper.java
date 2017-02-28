@@ -29,6 +29,12 @@ public class Helper {
         return tag;
     }
 
+    public static String getRandomNewsSource(){
+        String sources[] =  {"techcrunch","bbc-news","google-news","cnn","national-geographic","the-verge","usa-today"};
+        int rnd = new Random().nextInt(sources.length);
+        return sources[rnd];
+    }
+
     private static void getTags(){
 
         shortTags = new ArrayList<>();
