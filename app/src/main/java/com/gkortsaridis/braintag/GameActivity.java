@@ -40,12 +40,15 @@ public class GameActivity extends AppCompatActivity {
     boolean isChecking;
 
     ArrayList<String> wrongs;
+    boolean practice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+
+        practice = getIntent().getExtras().getBoolean("practice");
         paragraph = getIntent().getExtras().getString("paragraph");
 
         answers = new ArrayList<>();
@@ -89,6 +92,7 @@ public class GameActivity extends AppCompatActivity {
                     Intent intent = new Intent(GameActivity.this,GameResultActivity.class);
                     intent.putExtra("wordCount",wordCount);
                     intent.putExtra("correctCount",correctCount);
+                    intent.putExtra("practice",practice);
                     intent.putExtra("wrongs",wrongs.toString());
                     startActivity(intent);
                 }

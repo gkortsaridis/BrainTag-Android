@@ -38,6 +38,7 @@ public class ParagraphReviewActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     boolean fromCategories;
+    boolean practice;
     String preConfiguredCategory;
 
     @Override
@@ -75,10 +76,13 @@ public class ParagraphReviewActivity extends AppCompatActivity {
         if(preConfiguredCategory.equals("_news_")){
             String news = Helper.getRandomNewsSource();
             getNews(news);
+            practice = true;
         }else if(preConfiguredCategory.equals("_input_")){
             String input = getIntent().getExtras().getString("input");
             tagData(input);
+            practice = true;
         }else{
+            practice = false;
             getWikiParagraph();
         }
     }
@@ -332,6 +336,7 @@ public class ParagraphReviewActivity extends AppCompatActivity {
     public void startGame(View view){
         Intent intent = new Intent(ParagraphReviewActivity.this, GameActivity.class);
         intent.putExtra("paragraph",sentenceJsonArray.toString());
+        intent.putExtra("practice",practice);
         startActivity(intent);
     }
 

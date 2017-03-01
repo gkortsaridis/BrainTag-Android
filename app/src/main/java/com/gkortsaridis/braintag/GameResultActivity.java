@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gkortsaridis.braintag.Helpers.Helper;
 import com.loopj.android.http.AsyncHttpClient;
@@ -39,6 +40,7 @@ public class GameResultActivity extends AppCompatActivity {
     JSONObject wrongs_json;
     SharedPreferences sharedPreferences;
     Toolbar toolbar;
+    boolean isPractice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,8 @@ public class GameResultActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
+
+        isPractice = getIntent().getExtras().getBoolean("practice");
         sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
 
         result = (TextView) findViewById(R.id.result);
@@ -70,7 +74,11 @@ public class GameResultActivity extends AppCompatActivity {
         result.setText("Correct : "+correctCount+" out of "+wordCount+" words");
 
         createWrongsJson(wrongs);
-        postGameData();
+        if(!isPractice){
+            postGameData();
+        }else{
+            Toast.makeText(getBaseContext(),"That was a great practice! We hope to see you again!",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void postGameData(){
