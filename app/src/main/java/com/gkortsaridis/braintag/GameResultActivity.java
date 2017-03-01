@@ -59,7 +59,6 @@ public class GameResultActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-
         sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
 
         result = (TextView) findViewById(R.id.result);
