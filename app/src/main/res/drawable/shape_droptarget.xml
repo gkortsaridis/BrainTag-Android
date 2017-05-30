@@ -6,7 +6,6 @@
         android:width="2dp"
         android:color="#FF0000ff" />
 
-
     <corners
         android:bottomLeftRadius="2dp"
         android:bottomRightRadius="2dp"

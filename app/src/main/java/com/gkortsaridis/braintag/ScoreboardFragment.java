@@ -35,19 +35,14 @@ public class ScoreboardFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_scoreboard, container, false);
-
         usernames = new ArrayList<>();
         scores = new ArrayList<>();
-
         listView = (ListView) view.findViewById(R.id.listview);
-
         getData();
-
         return view;
     }
 

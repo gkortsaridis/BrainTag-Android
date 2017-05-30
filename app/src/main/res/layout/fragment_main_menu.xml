@@ -205,15 +205,9 @@
                                 android:id="@+id/myrank" />
 
                         </LinearLayout>
-
                     </LinearLayout>
-
-
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
-
         </RelativeLayout>
-
     </ScrollView>
-
 </RelativeLayout>

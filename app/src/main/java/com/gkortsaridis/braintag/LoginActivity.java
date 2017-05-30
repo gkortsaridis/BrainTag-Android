@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.gkortsaridis.braintag.Helpers.Helper;
 import com.loopj.android.http.AsyncHttpClient;
@@ -36,6 +37,16 @@ public class LoginActivity extends AppCompatActivity {
 
         username = (EditText) findViewById(R.id.username_ET);
         password = (EditText) findViewById(R.id.password_ET);
+
+        TextView t2 = (TextView) findViewById(R.id.registerTV);
+        t2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void login(View view){
